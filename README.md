@@ -1,6 +1,6 @@
 # Vue
 
-使用Vue CLI 脚手架创建一个vue项目
+## 使用Vue CLI 脚手架创建一个vue项目
 vue create vue-demo
 cd vue-demo
 npm run servegit 
@@ -61,3 +61,10 @@ vue的单文件相当于一个页面中的组件，包含了关于该组件的ht
 
 ### export default
 export default下可以写包括变量和方法，对象等，只要是想作为开放的接口都可以写，在.vue文件中一般写上data() {}以及method等,data指的是在该组件中定义的模板数据，而如果你对<template/>中的元素绑定了点击方法，如<button @click="login">
+
+
+## vue打包
+npm run build
+npm install -g serve
+serve dist
+访问: http://localhost:5000
