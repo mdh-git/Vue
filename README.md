@@ -74,7 +74,7 @@ serve dist
 ~~~
 父页引入子页面组件
 1. import 引入子组件
-2. 在components声明组件
+2. 在components声明标签
    components: {
         HelloWorld
      }
