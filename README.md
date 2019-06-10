@@ -1,9 +1,11 @@
 # Vue
 
-## 使用Vue CLI 脚手架创建一个vue项目
+## 使用Vue CLI 脚手架创建一个vue项目、
+~~~
 vue create vue-demo
 cd vue-demo
 npm run servegit 
+~~~
 
 ## vue文件夹的介绍
 
@@ -68,3 +70,22 @@ npm run build
 npm install -g serve
 serve dist
 访问: http://localhost:5000
+
+~~~
+父页引入子页面组件
+1. import 引入子组件
+2. 在components声明组件
+   components: {
+        HelloWorld
+     }
+3. <HelloWorld msg="Hello Vue!"/>  使用: 则动态传值
+
+子组件接受
+1. props声明接受
+export default {
+    props: {
+        msg: String
+    }
+}
+2. 在使用 
+~~~
