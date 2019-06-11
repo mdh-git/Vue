@@ -74,7 +74,7 @@ serve dist
 ~~~
 父页引入子页面组件
 1. import 引入子组件
-2. 在components声明标签
+2. 在components声明成标签
    components: {
         HelloWorld
      }
@@ -88,4 +88,47 @@ export default {
     }
 }
 2. 在使用 
+~~~
+
+
+## 回车监听事件
+
+~~~
+@keyup.enter
+enter键up触发的方法
+<input v-on:keyup.enter="submit">
+
+<input @keyup.enter="submit">
+
+
+注意！！！如果用了封装组件的话，比如element，这个时候使用按键修饰符需要加上.native
+
+比如：
+
+<el-input v-model="account" placeholder="请输入账号" @keyup.enter.native="search()"></el-input>
+
+~~~
+
+鼠标移动事件
+~~~
+onmouseenter
+onmouseleave
+
+onmouseover
+onmouseout
+
+当有两个div时   一个大的嵌套一个小的
+  ------------------------------
+  |      -------------------    |
+  |      |                 |    |
+  |      |                 |    |
+  |      |                 |    |
+  |      -------------------    |
+  |                             |
+  -------------------------------
+
+当鼠标进入大的div时，onmouseenter，onmouseover 都会触发
+当鼠标从大的div进入到小的div时，onmouseout 触发
+当鼠标从小的div退出到大的div时，onmouseover 触发
+当鼠标离开大的div时，onmouseleave 触发
 ~~~
