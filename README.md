@@ -132,3 +132,23 @@ onmouseout
 当鼠标从小的div退出到大的div时，onmouseover 触发
 只有当鼠标离开大的div时，onmouseleave 才触发
 ~~~
+
+## 计算属性 computed
+~~~
+计算属性 可以做计算值
+computed:{
+
+}
+
+定义一个数组
+arr: Array
+arr: [
+  label:{
+    title: 'abc',
+    status: ture
+    }
+]
+数组的操作
+arr.reduce((preTotal,label) => preTotal + (label.status?1:0), 0)
+
+~~~
