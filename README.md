@@ -109,7 +109,7 @@ enter键up触发的方法
 
 ~~~
 
-鼠标移动事件
+## 鼠标移动事件
 ~~~
 onmouseenter
 onmouseleave
@@ -130,5 +130,5 @@ onmouseout
 当鼠标进入大的div时，onmouseenter，onmouseover 都会触发
 当鼠标从大的div进入到小的div时，onmouseout 触发
 当鼠标从小的div退出到大的div时，onmouseover 触发
-当鼠标离开大的div时，onmouseleave 触发
+只有当鼠标离开大的div时，onmouseleave 才触发
 ~~~
