@@ -137,7 +137,10 @@ onmouseout
 ~~~
 计算属性 可以做计算值
 computed:{
-
+  size(){
+    // 数组的操作
+    return this.arr.reduce((preTotal,label) => preTotal + (label.status?1:0), 0)
+  }
 }
 
 定义一个数组
@@ -148,7 +151,9 @@ arr: [
     status: ture
     }
 ]
-数组的操作
-arr.reduce((preTotal,label) => preTotal + (label.status?1:0), 0)
+直接取 {{size}}
 
+筛选 arr数组中label为可用的,在放到原来的数组中
+this.arr = this.arr.filter(label => label.status)
+arr
 ~~~
