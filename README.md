@@ -1,5 +1,7 @@
-# Vue
-
+# Vue 
+~~~
+Vue.js  https://cn.vuejs.org
+~~~
 ## 使用Vue CLI 脚手架创建一个vue项目、
 ~~~
 vue create vue-demo
@@ -196,3 +198,29 @@ watch: { // 监视
 }
 ~~~
 
+# 自定义事件
+~~~
+第一种写法:
+父组件:
+<Todo @todo="todo"/>
+子组件:
+this.$emit('todo') // 触发监听
+父组件 @todo="todo" 传递函数,绑定监听
+子组件 this.$emit('todo') 触发事件
+this.$emit('函数名称', value) value可以是传递的值
+
+
+第二种写法:
+父组件:
+<Todo ref="son"/>
+mounted(){ // 执行异步代码
+  this.$on('函数名称', 回调函数)
+  this.$refs.son.$on('todo', this.todo)
+}
+
+methods:{
+  todo (){
+
+  }
+}
+~~~
