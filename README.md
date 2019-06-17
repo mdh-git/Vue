@@ -65,7 +65,9 @@ vue的单文件相当于一个页面中的组件，包含了关于该组件的ht
 export default下可以写包括变量和方法，对象等，只要是想作为开放的接口都可以写，在.vue文件中一般写上data() {}以及method等,data指的是在该组件中定义的模板数据，而如果你对<template/>中的元素绑定了点击方法，如<button @click="login">
 
 
+
 ## vue打包
+
 npm run build
 npm install -g serve
 serve dist
@@ -91,6 +93,7 @@ export default {
 ~~~
 
 
+
 ## 回车监听事件
 
 ~~~
@@ -109,7 +112,10 @@ enter键up触发的方法
 
 ~~~
 
+
+
 ## 鼠标移动事件
+
 ~~~
 onmouseenter
 onmouseleave
@@ -133,7 +139,10 @@ onmouseout
 只有当鼠标离开大的div时，onmouseleave 才触发
 ~~~
 
+
+
 ## 计算属性 computed
+
 ~~~
 计算属性 可以做计算值
 computed:{
@@ -156,4 +165,34 @@ arr: [
 筛选 arr数组中label为可用的,在放到原来的数组中
 this.arr = this.arr.filter(label => label.status)
 arr
+
 ~~~
+
+
+
+## 缓存 localStorage
+
+~~~
+存值存的是文本字符串,使用JSON转成想要的格式
+JSON.parse(window.localStorage.getItem('key') || '[]')
+从localStorage取值 
+window.localStorage.getItem('key')
+~~~
+
+## 监事  watch
+
+~~~
+data(){
+  arr: []
+}
+watch: { // 监视
+  arr: {
+    deep: true, //深度监视
+    handler: function (newValue, oldValue) {
+      // 最新的值存储在localStorage中
+      window.localStorage.setItem('key', JSON.stringify(newValue))
+    }
+  }
+}
+~~~
+
