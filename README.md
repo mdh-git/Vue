@@ -205,6 +205,7 @@ watch: { // 监视
 <Todo @todo="todo"/>
 子组件:
 this.$emit('todo') // 触发监听
+
 父组件 @todo="todo" 传递函数,绑定监听
 子组件 this.$emit('todo') 触发事件
 this.$emit('函数名称', value) value可以是传递的值
@@ -223,4 +224,19 @@ methods:{
 
   }
 }
+~~~
+
+~~~
+使用 VueResource插件
+
+引入  import VueResource from 'vue-resource'
+声明使用插件  Vue.use(VueResource)
+ this.$http.get(url).then(
+   response => {
+     // 成功
+   },
+   response => {
+     // 失败
+   }
+ )
 ~~~
