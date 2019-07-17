@@ -239,4 +239,59 @@ methods:{
      // 失败
    }
  )
+
+ 使用axios
+ 直接引入 import axios from 'axios'
+  axios.get(url).then(
+    response => {
+     // 成功
+   }
+  ).catch(error =>{
+    // 失败
+  })
+~~~
+
+
+~~~
+同级组件  兄弟组件传值   发布/订阅
+
+
+发布消息   import PubSub from 'pubsub-js'
+          PubSub.publish('消息名称', 消息内容)
+
+订阅消息   import PubSub from 'pubsub-js'
+          PubSub.subscribe('search', (msg, data) =>{
+
+          })
+~~~
+
+
+~~~
+vue中数组的操作
+
+变异方法
+push() 从数组末尾添加值。
+pop() 删除并返回数组的最后一个元素。
+shift() 把数组的第一个元素从其中删除，并返回第一个元素的值。
+unshift() 向数组的开头添加一个或更多元素，并返回新的长度。
+splice() 向/从数组中添加/删除项目，然后返回被删除的项目。
+sort() 对数组的元素进行排序。
+reverse() 用于颠倒数组中元素的顺序。
+
+
+替换数组
+filter() 创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。
+concat() 用于连接两个或多个数组。
+slice() 可从已有的数组中返回选定的元素。
+
+
+过滤数组使用filter
+
+从数组中取出一一对应的值  map
+注意  {} 表示函数体
+      ({})  表示对象
+const arr = []
+arr = array.map(item => ({
+  url: item.htmlUrl
+}))
 ~~~
