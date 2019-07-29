@@ -295,3 +295,23 @@ arr = array.map(item => ({
   url: item.htmlUrl
 }))
 ~~~
+
+~~~
+异步执行方法，去得结果
+方法() {
+      return new Promise((resolve, reject) => {
+        api(参数)
+          .then(res => {
+            resolve(res.data)
+          })
+          .catch(e => {
+            reject(e)
+          })
+      })
+    }
+    
+使用：
+方法().then(res =>{
+   res
+})
+~~~
